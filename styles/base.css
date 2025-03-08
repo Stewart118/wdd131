@@ -40,7 +40,7 @@
 }
 
 .navigation a:hover {
-    font-weight: 700;
+    font-size: 1.3rem;
     text-decoration: underline;
     text-decoration-color: yellow;
 }
