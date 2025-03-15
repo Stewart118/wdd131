@@ -40,7 +40,7 @@ nav {
 	font-size: 1.5rem;
 	border: 0;
 	background: none;
-	color: var(--font1-color);
+	color: white;
  	position: absolute;
 	display: block;
 	right: 2rem;
@@ -70,7 +70,7 @@ nav {
 	/* padding: 1rem; */
 	text-align: center;
 	text-decoration: none;
-	color: var(--font1-color);
+	color: aliceblue;
 	padding: .50rem;
 }
 
