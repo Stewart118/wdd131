@@ -6,6 +6,7 @@
 
 :root {
     --font1-color: #800016;
+	--font2-color: black;
     --background1-color: #407BA7;
     --highlight-background-color: #004E89;
     --highlight-font-color: #FF002B;
@@ -40,7 +41,6 @@ nav {
 	font-size: 1.5rem;
 	border: 0;
 	background: none;
-	color: white;
  	position: absolute;
 	display: block;
 	right: 2rem;
@@ -70,7 +70,8 @@ nav {
 	/* padding: 1rem; */
 	text-align: center;
 	text-decoration: none;
-	color: aliceblue;
+	color: var(--font2-color);
+	font-family: var(--typical-p-fontfamily);
 	padding: .50rem;
 }
 
@@ -106,6 +107,7 @@ main {
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	margin: 1rem auto;
+    color: var(--font1-color);
 }
 
 .figures {
@@ -126,6 +128,7 @@ main figure {
 
 header,
 footer {
+    color: var(--font2-color);
     background: var(--background1-color);
     padding: 1rem;
     text-align: center;
@@ -135,7 +138,6 @@ footer {
 header,
 main,
 footer {
-    color: var(--font1-color);
     font-family: var(--typical-p-fontfamily);
     font-size: var(--typical-p-fontsize);
 }
