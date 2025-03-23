@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Russia - Country Page - WDD 131</title>
+        <meta name="description" content="The country of Russia.">
+        <meta name="author" content="John Stewart">
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Georama:wght@100..900&display=swap" rel="stylesheet">
+        <script src="scripts/place.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Russia</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source srcset="images/moscow-st-basils-cathedral-russia-converted.webp" media="(min-width: 37.5em)">
+                    <img src="images/st-petersburg-st-isaacs-cathedral-converted.webp" alt="Russia Architecture">
+                </picture>
+                <section class="data stats">
+                    <h2><strong>Data</strong></h2>
+                    <ul>
+                        <li><strong>Area:</strong></li><li class="value"> 17,098,246 km²</li>
+                        <li><strong>Population:</strong></li><li class="value"> 146,599,183</li>
+                        <li><strong>Capital:</strong></li><li class="value"> Moscow</li>
+                        <li><strong>Language:</strong></li><li class="value"> Russian</li>
+                        <li><strong>Currency:</strong></li><li class="value"> Russian Ruble (₽) (RUB)</li>
+                        <li><strong>Time Zone:</strong></li><li class="value"> UTC+2 - +12</li>
+                        <li><strong>Calling Code:</strong></li><li class="value"> +7</li>
+                        <li><strong>Internet TLD:</strong></li><li class="value"> .ru .рф .su</li>
+                    </ul>
+                </section>
+                <section class="data weather">
+                    <h2><strong id="weather-header">Weather</strong></h2>
+                    <img src="images/weather-icon.svg" alt="Weather Icon" id="weather-icon">
+                    <ul>
+                        <li><strong>Temperature:</strong></li><li class="value" id="temperature"> -1°</li>
+                        <li><strong>Conditions:</strong></li><li class="value"> Cloudy</li>
+                        <li><strong>Winds:</strong></li><li class="value" id="wind-speed"> 5 km/h</li>
+                        <li><strong>Wind Chill:</strong></li><li class="value" id="wind-chill"> -1°</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>️© <span id="currentyear"></span> 🍰 John Stewart 🍰 Georgia</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>

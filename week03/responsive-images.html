@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>John Stewart | WDD 131 | Responsive Images</title>
+        <meta name="description" content="John Stewart's WDD131 Reponsive Images page.">
+        <meta name="author" content="John Stewart">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/responsive-images.css">
+        <script src="scripts/functions.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Design Principles</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="images/hero-small.webp">
+                    <source media="(max-width: 1000px)" srcset="images/hero-medium.webp">
+                    <img src="images/hero-large.webp" alt="Payson Utah Temple" width="500" height="250">
+                    <!-- <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                    <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                    <img src="images/hero-small.webp" alt="Payson Utah Temple" width="500" height="250"> -->
+                </picture>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
