@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+    --font1-color: #800016;
+	--font2-color: black;
+    --background1-color: #407BA7;
+    --highlight-background-color: #004E89;
+    --highlight-font-color: #FF002B;
+    --typical-border: 1.5px solid black;
+    --typical-p-fontsize: 1.1rem;
+    --typical-h-fontfamily: Lobster, "Bradley Hand", cursive;
+    --typical-p-fontfamily: Roboto, Helvetica, sans-serif;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+h1 {
+	text-align: left;
+	font-family: var(--typical-h-fontfamily);
+	font-size: 1.5rem;
+	margin-left: 1rem;
+    background: var(--background1-color);
+    color: var(--font1-color);
+}
+
+body {
+    margin: 0 auto;
+}
+
+.figures {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 1rem auto;
+    color: var(--font1-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.figures img {
+    padding: 1rem;
+    opacity: 0; /* Start with the image hidden */
+    animation: fadeIn 1s ease-in-out forwards; /* Apply the fade-in animation */
+}
+
+/* Optional: Add a delay to each image for a staggered effect */
+.figures img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.figures img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.figures img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+h1,
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    font-family: var(--typical-p-fontfamily);
+    font-size: var(--typical-p-fontsize);
+}
