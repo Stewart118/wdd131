@@ -1,0 +1,109 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+    --typical-border: 1.5px solid black;
+    --header-font-family: Lobster, "Bradley Hand", cursive;
+    --header-footer-background-color: #14481c;
+    --header-font-color: #F8961E;
+    /* --header-font-color: #FCA311; */
+    --paragraph-fontfamily: Georgia, sans-serif;
+    --paragraph-fontsize: 1.1rem;
+    --emphasis-fontfamily: "Afacad Flux", Georgia, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+h1,
+h2 {
+    font-family: var(--header-font-family);
+    color: var(--header-font-color);
+}
+
+.lobster {
+    font-family: var(--header-font-family);
+    font-size: 1.4rem;
+}
+
+main {
+    max-width: 80%;
+    margin: 2rem auto; /* Center the main content */
+    padding: 1rem; /* Add some padding for aesthetics */
+    border: var(--typical-border);
+    border-radius: 8px; /* Optional: for rounded corners */
+}
+
+.site-plan-section {
+	max-width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin: 1rem auto;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+h2 {
+    text-align: left;
+    font-size: 1.7rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+    background-color: var(--header-footer-background-color);
+    width: 20rem;
+}
+
+p {
+    font-family: var(--paragraph-fontfamily);
+    font-size: var(--paragraph-fontsize);
+    color: black;
+    margin: 0.5rem 1rem;
+    line-height: 1.5;
+}
+
+strong,
+.afacad-flux {
+    font-family: var(--emphasis-fontfamily);
+    font-size: 1.4rem;
+}
+
+.georgia-peach {
+    width: 18px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.wireframes {
+	display: flex;
+	flex-flow: row wrap;
+    text-align: center;
+	justify-content: space-around;
+    padding: 1rem;
+}
+
+.wireframes figcaption {
+    font-family: var(--emphasis-fontfamily);
+    font-size: 1.1rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+header,
+footer {
+    background-color: var(--header-footer-background-color);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.footer {
+    color: white;
+}
+
+.footer img {
+    margin-left: 0.5rem;
+}
