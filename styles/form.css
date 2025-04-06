@@ -1,0 +1,202 @@
+/* Variables and default styling */
+* {
+	/* box-sizing: border-box; */
+	margin: 0;
+	padding: 0;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+:root {
+    --typical-border: 1.5px solid black;
+    --header-font-family: Lobster, "Bradley Hand", cursive;
+    --header-footer-background-color: #577590;
+    --header-padding-color: #F8961E;
+    --header-font-color: #F9C74F;
+    --highlight-color: #277DA1;
+    --label-fontfamily: "Afacad Flux", Georgia, sans-serif;
+    --label-fontsize: 1.2rem;
+    --emphasis-fontfamily: Ubuntu, Georgia, sans-serif;
+    --required-emphasis-color: #F94144;
+    --required-valid-color: #277DA1;
+}
+
+/*--------------------------------*/
+/*---                          ---*/
+/*--- Header and Footer Styles ---*/
+/*---                          ---*/
+/*--------------------------------*/
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1,
+h2 {
+    font-family: var(--header-font-family);
+    color: var(--header-font-color);
+}
+
+header {
+    border-bottom: 2rem solid var(--header-padding-color);
+    margin-bottom: 1rem;
+}
+
+footer {
+    border-top: 2rem solid var(--header-padding-color);
+    margin-top: 1rem;
+}
+
+header,
+footer {
+    background-color: var(--header-footer-background-color);
+    color: var(--header-font-color);
+    padding: 0.5rem 1rem; /* Padding for header and footer */
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/*---------------------------------*/
+/*---                           ---*/
+/*---------- Form Styles ----------*/
+/*---                           ---*/
+/*---------------------------------*/
+
+/*----------- BODY --------------*/
+body {
+    font-size: var(--label-fontsize);
+    font-family: var(--label-fontfamily);
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    max-width: 600px;
+    padding: 0 2%;
+	align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.features,
+.topPadding {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+}
+
+.reviewForm1 div {
+    padding-top: 1rem;
+    color: #445ba9;
+    font-size: .9rem;
+}
+
+/* Required */
+
+.reviewForm1 input[type="date"],
+.reviewForm1 select {
+    background-color: #F9844A;
+    border: solid 1px #999;
+    border-radius: 6px;
+    color: #555;
+    padding: .75rem; /* Get them at least 44px high for touch devices */
+}
+
+.reviewForm1 input[type="text"],
+.reviewForm1 textarea,
+.reviewForm1 input[type="date"],
+.reviewForm1 select {
+    display: block;
+    padding: .75rem; /* Get them at least 44px high for touch devices */
+    width: 100%; /* Great for phones */
+    max-width: 400px; /* Better for larger devices */
+    appearance: none; /* Remove default styling in browsers */
+}
+
+.reviewForm1 textarea {
+    border: solid 2px black;
+}
+
+.reviewForm1 input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.checkboxLabel {
+    display: block;
+    padding-top: 0rem;
+    color: #9c2c13;
+}
+
+.reviewForm1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#4D908E, #277DA1);
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    box-shadow: 1px 1px 4px #999;
+    color: var(--header-font-color);
+    font-size: var(--label-fontsize);
+    font-family: var(--label-fontfamily);
+}
+
+.reviewForm1 input:required,
+.reviewForm1 select:invalid {
+    border: solid 3px var(--required-emphasis-color);
+    border-right: solid 12px var(--required-emphasis-color);
+}
+
+.reviewForm1 input:required:valid,
+.reviewForm1 select:valid {
+    border: solid 3px var(--required-valid-color);
+    border-right: solid 12px var(--required-valid-color);
+}
+
+mark {
+    background-color: white;
+    color: var(--highlight-color); /* Highlight color for emphasis */
+}
+
+/* Stars */
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+
+.starsHeader {
+    margin-bottom: -1.0rem;
+    margin-top: 1.0rem;
+}
+
+.stars > label {
+	color: gold;
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 1px;
+    margin-bottom: 0.7rem;
+	display: flex;
+	align-items: center;
+	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+
+.stars > label:hover {
+	color: #000;
+}
+
+.stars > label::before {
+	content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+	content: "\2605";
+}

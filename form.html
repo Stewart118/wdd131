@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Review</title>
+        <meta name="description" content="John Stewart's Product Review.">
+        <meta name="author" content="John Stewart">
+        <link rel="stylesheet" href="styles/form.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&family=Afacad+Flux&display=swap" rel="stylesheet">
+        <script src="scripts/form.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Product Review</h1>
+        </header>
+        <main>
+            <form method="get" action="review.html" class="reviewForm1">
+                <label class="topPadding">Product Name*
+                    <select name="product" id="product" required>
+                        <option value="" disabled selected>Select a Product ... &#9662;</option>
+                    </select>
+                </label>
+                <label class="topPadding starsHeader">Overall Rating*</label>
+                <div class="stars">
+                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4"><label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3"><label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2"><label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1"><label for="onestar"></label>
+                </div>
+                <label class="topPadding">Date of Installation* <input type="date" name="installationDate" required></label>
+                <span class="features">
+                    Which features did you find useful in the product?<br>
+                    (Select all that apply)
+                </span>
+                <label class="checkboxLabel"><input type="checkbox" name="durability" value="yes"> Durability</label>
+                <label class="checkboxLabel"><input type="checkbox" name="easeOfUse" value="yes"> Ease of Use</label>
+                <label class="checkboxLabel"><input type="checkbox" name="performance" value="yes"> Performance</label>
+                <label class="checkboxLabel"><input type="checkbox" name="design" value="yes"> Design</label>
+                <label class="topPadding">Written Review <mark class="optional">(Optional)</mark>  <textarea name="review"></textarea></label>
+                <label class="topPadding">Your Name <mark class="optional">(Optional)</mark> <input type="text" name="name"></label>
+                <input type="submit" value="Post Review" class="postReview">
+            </form>
+        </main>
+        <footer>
+            <p>️️© <span id="currentyear"></span> 🍑 John Stewart 🍑 Georgia</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
