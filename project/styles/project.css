@@ -88,18 +88,35 @@ footer {
 	flex-direction: column;
 	justify-content: space-evenly;
 	list-style: none;
+    /* padding-bottom: 1rem; */
 }
 
+.navigation li {
+    padding: 0.25rem;
+}
+
+.place-card a,
+.sources a,
 .navigation a {
-	display: none;
 	/* padding: 1rem; */
 	text-align: center;
 	text-decoration: none;
-	color: var(--font2-color);
+	color: var(--highlight-font-color);
 	font-family: var(--typical-p-fontfamily);
 	padding: .50rem;
 }
 
+.place-card a,
+.navigation a {
+	display: none;
+}
+
+.sources a {
+    display: block;
+}
+
+.place-card a:hover,
+.sources a:hover,
 .navigation a:hover {
 	background-color: var(--highlight-background-color);
 	color: var(--highlight-font-color);

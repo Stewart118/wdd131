@@ -1,9 +1,8 @@
 /* large view navigation ************************************/
 @media (min-width: 37.5em) {
     :root {
-        --background1-transparent-color: rgba(160, 0, 28, 0.5);
+        --background1-transparent-color: rgba(120, 0, 28, 0.5);
         --background2-transparent-color: rgba(0, 78, 137, 0.5);
-
     }
 
 	h1 {
@@ -21,9 +20,13 @@
 	}
 
 	.navigation {
+        padding-top: 1rem;
 		flex-direction: row;
+        padding-bottom: 0;
 	}
 
+    .place-card a,
+    .sources a,
 	.navigation a {
 		display: block;
 		flex: 1 1 100%;
@@ -47,6 +50,10 @@
         background: darkgreen;
         text-align: left;
         padding: 0.5rem;
+    }
+
+    .data ul li strong {
+        color: var(--header-font-color);
     }
 
     .stats {
@@ -73,7 +80,7 @@
     .data ul {
         padding: 0.65rem;
         box-shadow: 0 0 30px #111;
-        opacity: 0.7;
+        /* opacity: 0.9; */
         background: radial-gradient(var(--background1-transparent-color), var(--background2-transparent-color));
         color: white;
         /* background: tan; */
@@ -89,6 +96,10 @@
         /* margin: 0.5rem; */
         padding: 0.5rem;
         /* background: tan; */
+    }
+
+    .place-card a{
+        color: var(--highlight-font-color);
     }
 }
 
