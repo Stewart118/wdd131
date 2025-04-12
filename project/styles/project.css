@@ -1,0 +1,311 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+    --typical-border: 1.5px solid black;
+    --header-font-family: Lobster, "Bradley Hand", cursive;
+    --header-footer-background-color: #577590;
+    --header-padding-color: #F8961E;
+    --header-font-color: #F9C74F;
+    --highlight-color: #277DA1;
+    --label-fontfamily: "Afacad Flux", Georgia, sans-serif;
+    --label-fontsize: 1.2rem;
+    --paragraph-fontfamily: Georgia, sans-serif;
+    --paragraph-fontsize: 1.1rem;
+    --required-emphasis-color: #F94144;
+    --required-valid-color: #277DA1;
+}
+
+/* #region Header and Footer Styles*/
+/*--------------------------------*/
+/*--- Header and Footer Styles ---*/
+/*--------------------------------*/
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1,
+h2 {
+    font-family: var(--header-font-family);
+    color: var(--header-font-color);
+    background-color: var(--header-footer-background-color)
+}
+
+header {
+    border-bottom: 2rem solid var(--header-padding-color);
+    margin-bottom: 1rem;
+}
+
+header,
+footer {
+    color: var(--header-font-color);
+    background: var(--header-footer-background-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+header,
+main,
+footer {
+    font-family: var(--paragraph-fontfamily);
+    font-size: var(--paragraph-fontsize);
+}
+/* #endregion Header Footer */
+
+/* #region Navigation */
+/*-------------------*/
+/*--- Navigation ---*/
+/*-------------------*/
+
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+ 	position: absolute;
+	display: block;
+	right: 2rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❌";
+}
+
+#menu:hover {
+	cursor: pointer;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	list-style: none;
+}
+
+.navigation a {
+	display: none;
+	/* padding: 1rem; */
+	text-align: center;
+	text-decoration: none;
+	color: var(--font2-color);
+	font-family: var(--typical-p-fontfamily);
+	padding: .50rem;
+}
+
+.navigation a:hover {
+	background-color: var(--highlight-background-color);
+	color: var(--highlight-font-color);
+	/* font-weight: 700; */
+	font-size: 1.3rem;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+.active::before {
+	content: "📍";  /* just a wayfinding symbol for the user*/
+}
+
+.active {
+	background-color: grey;
+}
+/* #endregion Navigation */
+
+/* #region Index */
+/*-------------*/
+/*--- Index ---*/
+/*-------------*/
+.hero {
+	text-align: center;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.data {
+	background: radial-gradient(var(--primary-color), var(--secondary-color));
+    /* border: var(--typical-border); */
+	padding: 0.65rem;
+	/* box-shadow: 0 0 30px #111; */
+}
+
+.data ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+}
+
+.data ul li {
+    list-style: none;
+}
+
+.value {
+    text-align: left;
+    padding-left: 0.25rem;
+}
+
+.data ul li strong {
+    display: block;
+    text-align: right;
+}
+
+#weather-icon {
+    width: 50px;
+    height: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+/* #endregion Index */
+
+/* #region Contact Us */
+/*------------------*/
+/*--- Contact Us ---*/
+/*------------------*/
+
+p {
+    font-family: var(--paragraph-fontfamily);
+    font-size: var(--paragraph-fontsize);
+    padding-top: 0.5rem;
+}
+
+legend {
+    font-family: var(--header-font-family);
+    font-size: 1.6rem;
+}
+
+.places-outer,
+.outer-box,
+form {
+    max-width: 80%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px var(--header-padding-color);
+}
+
+.padding {
+    display: block;
+    padding: 0.5rem;
+}
+
+div label {
+    padding: 0 0.25rem;
+}
+
+.contact-form input[type="radio"] {
+    margin-right: 6px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="date"],
+.contact-form textarea,
+.contact-form select {
+    font-family: var(--paragraph-fontfamily); 
+    font-size: var(--paragraph-fontsize);
+    display: block;
+    padding: .75rem; /* Get them at least 44px high for touch devices */
+    width: 100%; /* Great for phones */
+    max-width: 400px; /* Better for larger devices */
+    appearance: none; /* Remove default styling in browsers */
+    margin: 0.35rem 0;
+    border: solid 1.75px black;
+}
+
+.contact-form input:required,
+.contact-form select:invalid {
+    border: solid 1.75px var(--required-emphasis-color);
+    border-right: solid 12px var(--required-emphasis-color);
+}
+
+.contact-form input:required:valid,
+.contact-form select:valid {
+    border: solid 2px var(--required-valid-color);
+    border-right: solid 12px var(--required-valid-color);
+}
+
+strong {
+    color: var(--required-emphasis-color);
+}
+
+mark {
+    background-color: white;
+    color: var(--highlight-color); /* Highlight color for emphasis */
+}
+
+.contact-form input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#4D908E, #277DA1);
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 4px #999;
+    color: var(--header-font-color);
+    font-size: var(--label-fontsize);
+    font-family: var(--label-fontfamily);
+}
+
+/* #endregion Contact Us */
+
+/* #region Places */
+/*----------------*/
+/*--- Places -----*/
+/*----------------*/
+
+.places {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	flex-flow: column;
+}
+
+.place-card {
+	max-width: 400px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin: 1rem 1rem;
+}
+
+.place-card figure {
+    margin: 0;
+}
+
+.place-card figure img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.place-card figcaption {
+    font-family: var(--label-fontfamily);
+    font-size: var(--label-fontsize);
+    font-weight: bold;
+    padding: 0.25rem;
+}
+
+.place-card p {
+    max-width: 97%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* #endregion Places */

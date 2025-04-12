@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visit Georgia | Contact Us</title>
+        <meta name="description" content="John Stewart | Visit Georgia | Contact Us.">
+        <meta name="author" content="John Stewart">
+        <link rel="stylesheet" href="styles/project.css">
+        <link rel="stylesheet" href="styles/project-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&family=Afacad+Flux:wght@700&display=swap" rel="stylesheet">
+        <script src="scripts/project.js" defer></script>
+        <script src="scripts/contact.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Contact Us</h1>
+            <button id="menu" aria-label="Menu button"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="places.html" title="Places to Visit">Places to Visit</a></li>
+                    <li><a href="contact.html" title="Contact Us">Contact Us</a></li>
+                    <li><a href="sources.html" title="Sources">Sources</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form method="get" action="thankyou.html" class="contact-form">
+                <fieldset>
+                    <legend>Tell Us More...</legend>
+                    <div class="padding">Have you visited Georgia before?<strong>*</strong>
+                        <label><input type="radio" name="visited-previously" value="yes">Yes</label>
+                        <label><input type="radio" name="visited-previously" value="no">No</label>
+                    </div>
+                    <label class="padding">When Was your Last Visit<strong>*</strong> <input type="date" name="last-visit-date" required></label>
+                    <label class="padding">Which of the following best indicates your visit to this site?<strong>*</strong>
+                        <select name="interest-level" id="interest-level" required>
+                            <option value="" disabled selected>Select a Product ... &#9662;</option>
+                            <option value="curiosity">Curiosity</option>
+                            <option value="interested">Interested in Visiting Georgia</option>
+                            <option value="planning">Visiting Georgia and Planning for my Trip</option>
+                            <option value="visited">Visited Georgia</option>
+                            <option value="returning">Visited Georgia Many Times and Want To Return</option>
+                            <option value="love">Absolutely Love Georgia!</option>
+                        </select>
+                    </label>
+                    <label class="padding">What more would you like to know about Georgia that we could help you with? <mark class="optional">(Optional)</mark>  <textarea name="additional-information"></textarea></label>
+                    <label class="padding">Your Name <mark class="optional">(Optional)</mark> <input type="text" name="name"></label>
+                    <label class="padding">Email <mark class="optional">(Required if requesting information, optional otherwise)</mark> <input type="text" name="email"></label>
+                    <input type="submit" value="Send Feedback" class="post-feedback">
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <p>© <span id="currentyear"></span> 🍑 John Stewart 🍑 Georgia</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
+

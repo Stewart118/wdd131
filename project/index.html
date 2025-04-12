@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visit Georgia</title>
+        <meta name="description" content="John Stewart | Visit Georgia.">
+        <meta name="author" content="John Stewart">
+        <link rel="stylesheet" href="styles/project.css">
+        <link rel="stylesheet" href="styles/project-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&family=Afacad+Flux:wght@700&display=swap" rel="stylesheet">
+        <script src="scripts/project.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>🍑 Visit Georgia</h1>
+            <h2>We're Glad Georgia's On Your Mind.</h2>
+            <button id="menu" aria-label="Menu button"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="places.html" title="Places to Visit">Places to Visit</a></li>
+                    <li><a href="contact.html" title="Contact Us">Contact Us</a></li>
+                    <li><a href="sources.html" title="Sources">Sources</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source srcset="images/atlanta_braves_large.webp" media="(min-width: 37.5em)">
+                    <img src="images/atlanta_braves_card.webp" alt="Atlanta Braves">
+                </picture>
+                <section class="data stats">
+                    <h2><strong>Data</strong></h2>
+                    <ul>
+                        <li><strong>Area:</strong></li><li class="value"> 59,424.64 sq mi (ranked 24th)</li>
+                        <li><strong>Population:</strong></li><li class="value"> 11,180,878 (ranked 8th)</li>
+                        <li><strong>Capital:</strong></li><li class="value"> Atlanta</li>
+                        <li><strong>Founded:</strong></li><li class="value"> 1732</li>
+                        <li><strong>Admitted to the Union:</strong></li><li class="value"> January 2, 1788 (4th State to Ratify).</li>
+                        <li><strong>Time Zone:</strong></li><li class="value"> Eastern (UTC-5)</li>
+                    </ul>
+                </section>
+                <section class="data weather">
+                    <h2><strong id="weather-header">Weather</strong></h2>
+                    <img src="images/weather-icon.svg" alt="Weather Icon" id="weather-icon">
+                    <ul>
+                        <li><strong>Temperature:</strong></li><li class="value" id="temperature"> 49°</li>
+                        <li><strong>Conditions:</strong></li><li class="value"> Cloudy</li>
+                        <li><strong>Winds:</strong></li><li class="value" id="wind-speed"> 12 mph</li>
+                        <li><strong>Wind Chill:</strong></li><li class="value" id="wind-chill"> -1°</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="history">
+            </div>
+        </main>
+        <footer>
+            <p>© <span id="currentyear"></span> 🍑 John Stewart 🍑 Georgia</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
